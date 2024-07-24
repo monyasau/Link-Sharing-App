@@ -1,0 +1,139 @@
+.container{
+    width: 100%;
+    height: 78px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 0px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-column: 1/3;
+}
+
+.logo{
+    width: 146px;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.links{
+    display: flex;
+    gap: 16px;
+}
+
+.link{
+    height: 46px;
+    white-space: nowrap;
+    border-radius: 8px;
+    display: flex;
+    align-items: center; 
+    color: #737373;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    cursor: pointer;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+.link:hover{
+    background-color: #EFEBFF;
+}
+
+.link:nth-of-type(1){
+    width: 122px;
+    height: 46px;
+    display: flex;
+}
+
+.link span {
+    pointer-events: none;
+    background-color: #737373;
+    width: 20px;
+    height: 20px;
+    mask-size: 20px 20px;
+    -webkit-mask-size: 20px 20px;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;    
+}
+
+.link:nth-of-type(1) span{
+    mask-image: url('../../public/icons/icon-links-header.svg');
+    -webkit-mask-image: url('../../public/icons/icon-links-header.svg');
+}
+
+.link:nth-of-type(2){
+    width: 187px;
+}
+
+.link:nth-of-type(2) span {
+    mask-image: url('../../public/icons/icon-profile-details-header.svg');
+    -webkit-mask-image: url('../../public/icons/icon-profile-details-header.svg');
+}   
+
+.previewButton{
+    width: 114px;
+    height: 46px;
+    border-radius: 8px;
+    background-color: transparent;
+    border: 1px solid #633CFF;
+    cursor: pointer;
+    color: #633CFF;
+    font-family: var(--font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.previewButton:hover{
+    background-color: #EFEBFF;
+}
+
+.eyeIcon{
+    width: 20px;
+    object-fit: contain;
+
+}
+
+@media(max-width: 900px){
+    .logo{
+        width: 108px;
+    }
+
+    .links {
+        gap: 0px;
+    }
+}
+
+@media(max-width: 700px){
+
+    .container{
+        height: 74px;
+    }
+    .logo{
+        width: 32px;
+    }
+
+    .link{
+        justify-content: center;
+    }
+
+    .link:nth-of-type(1), .link:nth-of-type(2){
+        width: 74px;
+        height: 42px;
+    }
+
+    .previewButton{
+        width: 52px;
+        height: 42px;
+        justify-content: center;
+    }
+}
